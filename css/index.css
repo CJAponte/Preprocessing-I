@@ -142,6 +142,12 @@ body {
   max-width: 900px;
   margin: 0px auto;
 }
+.flexMargin {
+  display: inline-flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
 .navigationBarContainer {
   width: 100%;
   display: inline-flex;
@@ -253,7 +259,7 @@ body {
 }
 .resumeContent .resumeIntroduction p a {
   text-decoration: none;
-  color: yellow;
+  color: aqua;
   text-shadow: 2px 0px 3px black;
   font-weight: bold;
 }
@@ -330,6 +336,30 @@ body {
     text-align: center;
   }
 }
+@media (max-width: 1340px) {
+  .resumeContent .resumeSkills .skills {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-top: -1.5rem;
+  }
+  .resumeContent .resumeSkills #skillsLeftList {
+    margin: 0px auto;
+  }
+  .resumeContent .resumeSkills #skillsLeftList li {
+    border-bottom: 1px solid lightgrey;
+    padding: 0.2rem;
+    text-align: center;
+  }
+  .resumeContent .resumeSkills #skillsRightList {
+    margin: 0px auto;
+  }
+  .resumeContent .resumeSkills #skillsRightList li {
+    border-bottom: 1px solid lightgrey;
+    padding: 0.2rem;
+    text-align: center;
+  }
+}
 .resumeContent .workHistory {
   display: inline-flex;
   flex-direction: column;
@@ -356,18 +386,11 @@ body {
   width: 100%;
   margin-bottom: 1.5rem;
 }
-.resumeContent .workHistory #workLeftList {
+.resumeContent .workHistory #workList {
   width: 45%;
+  font-size: 0.75rem;
 }
-.resumeContent .workHistory #workLeftList li {
-  border-bottom: 1px solid lightgrey;
-  padding: 0.2rem;
-  text-align: center;
-}
-.resumeContent .workHistory #workRightList {
-  width: 45%;
-}
-.resumeContent .workHistory #workRightList li {
+.resumeContent .workHistory #workList li {
   border-bottom: 1px solid lightgrey;
   padding: 0.2rem;
   text-align: center;

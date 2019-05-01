@@ -70,6 +70,16 @@ body{
 	margin: 0px auto;
 }
 
+@accent-color: aqua;
+@secondary-color: lightgrey;
+
+.flexMargin{
+	display: inline-flex;
+	justify-content: space-around;
+	width: 100%;
+	margin-bottom: 1.5rem;
+}
+
 
 .navigationBarContainer{
 	width: 100%;
@@ -85,11 +95,11 @@ body{
 		a{
 			text-decoration: none;
 			color: black;
-			border-bottom: 1px solid lightgrey;
+			border-bottom: 1px solid @secondary-color;
 		}
 
 		a:hover{
-			border-bottom: 1px solid aqua;
+			border-bottom: 1px solid @accent-color;
 		}
 
 	}
@@ -109,7 +119,7 @@ body{
 			border-top: 1px solid lightgrey;
 		}
 		a:hover{
-			border-top: 1px solid aqua;
+			border-top: 1px solid @accent-color;
 		}
 	}
 	}
@@ -120,7 +130,7 @@ body{
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
-	border: 2px solid lightgrey;
+	border: 2px solid @secondary-color;
 	width:  60%;
 	margin: 0px auto;
 	margin-top: 2.5rem;
@@ -159,7 +169,7 @@ body{
 		margin: .5rem auto;
 		color: grey;
 		padding-bottom: .25rem;
-		border-bottom: 1px solid lightgrey;
+		border-bottom: 1px solid @secondary-color;
 		text-align: center;
 	}
 
@@ -184,7 +194,7 @@ body{
 	h2{
 		font-weight: bolder;
 		text-align: center;
-		border-bottom: 2px solid lightgrey;
+		border-bottom: 2px solid @secondary-color;
 		margin-bottom: 10px;
 	}
 
@@ -194,11 +204,11 @@ body{
 		font-size: .75rem;
 		text-align: center;
 		padding: 1rem;
-		border-bottom: 1px solid lightgrey;
+		border-bottom: 1px solid @secondary-color;
 		margin-bottom: 1rem;
 		a{
 			text-decoration: none;
-			color: yellow;
+			color: @accent-color;
 			text-shadow: 2px 0px 3px black;
 			font-weight: bold;
 		}
@@ -221,7 +231,7 @@ body{
 	h2{
 		font-weight: bolder;
 		text-align: center;
-		border-bottom: 2px solid lightgrey;
+		border-bottom: 2px solid @secondary-color;
 		margin-bottom: 10px;
 	}
 
@@ -285,6 +295,32 @@ body{
 		}
 
 	}
+
+	@media(max-width: 1340px){
+		.skills{
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: column;
+			margin-top: -1.5rem;
+		}
+		#skillsLeftList{
+			margin: 0px auto;
+			
+			li{
+				border-bottom: 1px solid @secondary-color;
+				padding: .2rem;
+				text-align: center;
+			}
+		}
+		#skillsRightList{
+			margin: 0px auto;		
+			li{
+				border-bottom: 1px solid @secondary-color;
+				padding: .2rem;
+				text-align: center;
+			}
+		}
+	}
 }
 
 	.workHistory{
@@ -305,7 +341,7 @@ body{
 
 		hr{
 			width: 100%;
-			border: 1px solid lightgrey;
+			border: 1px solid @secondary-color;
 			margin: 1.25rem auto;
 		}
 
@@ -316,23 +352,17 @@ body{
 			margin-bottom: 1.5rem;
 		}
 
-		#workLeftList{
+		#workList{
 			width: 45%;
+			font-size: .75rem;
 			li{
-				border-bottom: 1px solid lightgrey;
+				border-bottom: 1px solid @secondary-color;
 				padding: .2rem;
 				text-align: center;
 
 			}
 		}
-		#workRightList{
-			width: 45%;
-			li{
-				border-bottom: 1px solid lightgrey;
-				padding: .2rem;
-				text-align: center;
-			}
-		}
+
 
 
 
