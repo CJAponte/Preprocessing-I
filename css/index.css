@@ -136,5 +136,239 @@ body {
 }
 /* ----------------------------------- */
 html {
-  background-color: red;
+  font-size: 16px;
+}
+body {
+  max-width: 900px;
+  margin: 0px auto;
+}
+.navigationBarContainer {
+  width: 100%;
+  display: inline-flex;
+  justify-content: flex-end;
+  margin-top: 1.5rem;
+  padding-right: 5rem;
+}
+.navigationBarContainer .navigationBar {
+  display: inline-flex;
+  width: 50%;
+  justify-content: space-around;
+}
+.navigationBarContainer .navigationBar a {
+  text-decoration: none;
+  color: black;
+  border-bottom: 1px solid lightgrey;
+}
+.navigationBarContainer .navigationBar a:hover {
+  border-bottom: 1px solid aqua;
+}
+@media (max-width: 500px) {
+  .navigationBarContainer .navigationBar {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    position: relative;
+    right: 0.5rem;
+  }
+  .navigationBarContainer .navigationBar a {
+    margin: 0.2rem auto;
+    width: 6rem;
+    align-items: center;
+    padding: 1rem;
+    border-top: 1px solid lightgrey;
+  }
+  .navigationBarContainer .navigationBar a:hover {
+    border-top: 1px solid aqua;
+  }
+}
+.resumeContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border: 2px solid lightgrey;
+  width: 60%;
+  margin: 0px auto;
+  margin-top: 2.5rem;
+  border-radius: 0.25rem;
+  align-items: center;
+}
+@media (max-width: 500px) {
+  .resumeContent .resumeContent {
+    width: 80%;
+    position: relative;
+  }
+}
+.resumeContent .headerInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 60%;
+  margin: 0px auto;
+  border-radius: 0.25rem;
+  align-items: center;
+}
+.resumeContent .headerInfo h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 0.25rem;
+}
+.resumeContent .headerInfo h2 {
+  width: 100%;
+  font-size: 0.75rem;
+  margin: 0.5rem auto;
+  color: grey;
+  padding-bottom: 0.25rem;
+  border-bottom: 1px solid lightgrey;
+  text-align: center;
+}
+.resumeContent .headerInfo hr {
+  width: 90%;
+  border: 1px solid grey;
+  margin: 1.25rem auto;
+}
+@media (max-width: 500px) {
+  .resumeContent .headerInfo .headerInfo {
+    width: 150%;
+  }
+}
+.resumeContent .resumeIntroduction {
+  width: 100%;
+}
+.resumeContent .resumeIntroduction h2 {
+  font-weight: bolder;
+  text-align: center;
+  border-bottom: 2px solid lightgrey;
+  margin-bottom: 10px;
+}
+.resumeContent .resumeIntroduction p {
+  width: 76%;
+  margin: 0px auto;
+  font-size: 0.75rem;
+  text-align: center;
+  padding: 1rem;
+  border-bottom: 1px solid lightgrey;
+  margin-bottom: 1rem;
+}
+.resumeContent .resumeIntroduction p a {
+  text-decoration: none;
+  color: yellow;
+  text-shadow: 2px 0px 3px black;
+  font-weight: bold;
+}
+@media (max-width: 500px) {
+  .resumeContent .resumeIntroduction p {
+    width: 100%;
+  }
+}
+.resumeContent .resumeSkills {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 0px auto;
+}
+.resumeContent .resumeSkills h2 {
+  font-weight: bolder;
+  text-align: center;
+  border-bottom: 2px solid lightgrey;
+  margin-bottom: 10px;
+}
+.resumeContent .resumeSkills #skillsLeftList {
+  font-size: 0.75rem;
+  display: inline-flex;
+  flex-wrap: wrap;
+  width: 45%;
+  justify-content: space-between;
+  text-align: center;
+  float: left;
+  margin-left: 1rem;
+}
+.resumeContent .resumeSkills #skillsLeftList li {
+  width: 100%;
+  border-bottom: 1px solid grey;
+  padding: 0.5rem;
+  align-items: center;
+}
+.resumeContent .resumeSkills #skillsRightList {
+  font-size: 0.75rem;
+  display: inline-flex;
+  flex-wrap: wrap;
+  width: 45%;
+  justify-content: space-between;
+  text-align: center;
+  float: right;
+  margin-right: 1rem;
+}
+.resumeContent .resumeSkills #skillsRightList li {
+  width: 100%;
+  border-bottom: 1px solid grey;
+  padding: 0.5rem;
+  align-items: center;
+}
+@media (max-width: 500px) {
+  .resumeContent .resumeSkills .skills {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-top: -1.5rem;
+  }
+  .resumeContent .resumeSkills #skillsLeftList {
+    margin: 0px auto;
+  }
+  .resumeContent .resumeSkills #skillsLeftList li {
+    border: 1px solid transparent;
+    padding: 0.2rem;
+    text-align: center;
+  }
+  .resumeContent .resumeSkills #skillsRightList {
+    margin: 0px auto;
+  }
+  .resumeContent .resumeSkills #skillsRightList li {
+    border: 1px solid transparent;
+    padding: 0.2rem;
+    text-align: center;
+  }
+}
+.resumeContent .workHistory {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0px auto;
+  width: 100%;
+}
+.resumeContent .workHistory h2 {
+  font-weight: bolder;
+  margin: 0px auto;
+  width: 100%;
+  text-align: center;
+  margin-top: 2.5rem;
+  margin-bottom: -1rem;
+}
+.resumeContent .workHistory hr {
+  width: 100%;
+  border: 1px solid lightgrey;
+  margin: 1.25rem auto;
+}
+.resumeContent .workHistory #work {
+  display: inline-flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+.resumeContent .workHistory #workLeftList {
+  width: 45%;
+}
+.resumeContent .workHistory #workLeftList li {
+  border-bottom: 1px solid lightgrey;
+  padding: 0.2rem;
+  text-align: center;
+}
+.resumeContent .workHistory #workRightList {
+  width: 45%;
+}
+.resumeContent .workHistory #workRightList li {
+  border-bottom: 1px solid lightgrey;
+  padding: 0.2rem;
+  text-align: center;
 }
